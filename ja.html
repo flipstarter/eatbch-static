@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="ja"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Preload assets -->
+  <link rel="preload" href="img/logo.png" as="image">
+  <link rel="preload" href="img/clouds.png" as="image">
+  <link rel="preload" href="img/grass.png" as="image">
+  <link rel="preload" href="img/water.png" as="image">
+  <link rel="preload" href="fonts/cairo.woff2" as="font" crossorigin="">
+  <link rel="preload" href="fonts/icons.woff" as="font" crossorigin="">
+
+  <!-- preload fonts -->
+  <style>
+    /** Fonts **/
+    @font-face
+    {
+      font-display: swap;
+      font-family: 'Cairo';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Cairo'), local('Cairo-Regular'), url('fonts/cairo.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+
+    @font-face
+    {
+      font-display: swap;
+      font-family: 'icons';
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+      src: url('fonts/icons.woff') format('woff');
+    }
+  </style>
+
+  <!-- -->
+  <link rel="icon" href="img/logo.png">
+
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet">
+  <link href="css/style.css" type="text/css" rel="stylesheet">
+
+  <title>Flipstarter: EatBCH</title>
+</head>
+<body class="clouds">
+  <div class="grass">
+    <div class="background">
+
+      <!-- Site header -->
+      <header id="header" class="container row center">
+        <h1 class="cols s12 m12 l12">
+          <img src="img/logo.png" alt="Flipstarter logotype">
+          <span>Flipstarter</span>
+        </h1>
+        <p class="col s12 m12 l12" data-label="siteIntro">ビットコインキャッシュインフラストラクチャの資金調達は重要です、インフラストラクチャの多様性が、強いエコシステムを実現するからです。Flipstarterでプロジェクトの説明責任と公平性を開示し、プロジェクトがより多くの資金提供者を募る事が出来るようになります。</p>
+        <ul class="col s10 m10 l10 push-s1 push-m1 push-l1" style="display: flex; justify-content: center; text-align: left;">
+          <li class="col">
+            <a class="valign-wrapper" href="https://read.cash/@flipstarter/introducing-flipstarter-31ce86f3">
+              <i class="icon-info"></i>
+              &nbsp;
+              <span data-label="linkWhatIs">Flipstarterとはなんですか？</span>
+            </a>
+          </li>
+          <li class="col">
+            <a class="valign-wrapper" href="https://read.cash/@flipstarter/how-to-support-a-flipstarter-campaign-f27240d9">
+              <i class="icon-info"></i>
+              &nbsp;
+              <span data-label="linkHowTo">Flipstarterはどのように使いますか？</span>
+            </a>
+          </li>
+          <li class="col">
+            <a class="valign-wrapper" href="https://read.cash/@flipstarter/flipstarter-faq-66c56b03">
+              <i class="icon-info"></i>
+              &nbsp;
+              <span data-label="linkFAQ">よくある質問</span>
+            </a>
+          </li>
+        </ul>
+      </header>
+
+      <!-- Site content -->
+      <main class="container row z-depth-2">
+
+        <!-- Campaign -->
+        <article id="campaign" class="col s12 m12 l8" style="margin-bottom: 0.75rem;">
+          <h1 style="display: none;">Campaign</h1>
+
+          <!-- Campaign overview -->
+          <section id="overview">
+            <h2 style="display: none;">Campaign overview</h2>
+            <div style="float: left;">
+              <span class="valign-wrapper" style="float: left;">
+                <i class="icon-access_time"></i>
+                <span id="timerLabel" data-label="fullfilledLabel">成功</span>
+                <b id="campaignExpiration">4ヶ月前</b>
+              </span>
+            </div>
+            <div style="float: right;">
+              <span class="valign-wrapper" style="float: left;">
+                <i class="icon-bookmark_border"></i>
+                <span id="compaignContributionAmount">20.00</span>
+                <i>/</i>
+                <span id="campaignRequestAmount">20.00</span>
+                <b>BCH</b>
+              </span>
+            </div>
+            <div class="progress">
+              <div class="determinate" id="campaignProgressBar" style="width: 100%;"></div>
+              <div class="determinate" id="campaignContributionBar" style="left: 100%; width: 0%;"></div>
+            </div>
+          </section>
+
+          <!-- Campaign heading -->
+          <header id="campaignAbstract"><h2 id="一ヶ月分の食料支援をサポートしてください。">一ヶ月分の食料支援をサポートしてください。</h2>
+            <p>過去二年間、私たちは料理や食糧を必要とする人達へ届けてきました。次の一ヶ月分の運営費用を賄う為に是非皆様ご協力ください。</p>
+            <ul>
+              <li>ベネズエラ、<strong>9</strong>ヶ所で<strong>25</strong>人のボランティアによる食糧支援をサポート。</li>
+              <li>南スーダン、<strong>11</strong>ヶ所で<strong>13</strong>人のボランティアによる食糧支援をサポート。</li>
+            </ul>
+            <p>私達はこの不安定な時代にお互いに何か助け合う事は出来ないかと集まった有志によるグループです。 真心を込めて用意した温かい料理以上に、人々が深い絆で結ばれるものがあるでしょうか？</p>
+          </header>
+
+          <!-- Campaign donation form -->
+          <fieldset id="donateField" class="row fullfilled">
+            <div id="donateStatus" class="col s12 m12 l12" style="text-align: center;" data-label="statusFullfilled">キャンペーンが成功しました。</div>
+
+            <div id="donateForm" class="col s12 m12 l12 hidden">
+              <div class="input-field col s1 m1 l1" style="padding: 0;">
+                <i style="display: inline-block; width: 3rem; height: 3rem; text-align: center; opacity: 0.50; font-size: 2.25rem; line-height: 3.25rem;" class="icon-attach_money"></i>
+              </div>
+              <div class="input-field col s11 m5 l6" style="padding: 0; text-align: center;">
+                <input type="range" min="0" max="100" value="0" step="0.20" class="slider" id="donationSlider" style="height: 3rem; padding: 0; width: calc(100% - 2rem); margin: 0rem;">
+              </div>
+              <div class="input-field col s12 m6 l5" style="padding: 0 0.75rem; margin: 0.75rem 0rem;">
+                <button id="donateButton" class="btn waves-effect waves-light green" style="width: 100%; padding: 0; margin: 0rem;" disabled="">
+                  <span id="donateText" data-label="donateText">プレッジ</span>
+                  <span id="donationAmount" data-satoshis="0">0 BCH (0.00 JPY)</span>
+                </button>
+              </div>
+            </div>
+
+            <div id="donateSection" class="hidden col s12 m12">
+              <div class="col" style="background-color: white; border-radius: 0.25rem; border: 1px solid rgba(0, 0, 0, 0.31); padding-bottom: 1.5rem; padding-top: 0.75rem;">
+                <div class="col s12 m12 l12" style="margin-top: 0.75rem;">
+                  <div class="row" style="display: flex; flex-direction: column; justify-content: center; height: 10.50rem; padding: 1rem; margin: 0rem; margin-top: 0.5rem; border: 1px solid rgb(169, 169, 169); box-shadow: inset 0rem 0.10rem 0.25rem rgba(0, 0, 0, 0.13);">
+                    <div class="input-field col s12 m12 l12" style="">
+                      <i style="opacity: 0.50; font-size: 2.25rem; line-height: 2.25rem;" class="icon-person_outline prefix"></i>
+                      <input id="contributionName" type="text" maxlength="24">
+                      <label for="contributionName" data-label="usernameLabel">名前 (オプション)</label>
+                    </div>
+
+                    <div class="input-field col s12 m12 l12" style="">
+                      <i style="opacity: 0.50; font-size: 2.00rem; line-height: 2.50rem;" class="icon-chat_bubble_outline prefix"></i>
+                      <input id="contributionComment" type="text" maxlength="120">
+                      <label for="contributionComment" data-label="commentLabel">コメント (オプション)</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col s12 m12 l3" style="margin-top: 0.75rem;">
+                  <small style="display: inline-block; width: 100%; text-align: center;" data-label="copyLabel">1. 詳細をコピー</small>
+                  <textarea rows="5" id="template" name="template" placeholder="Copy this" style="height: 7rem; font-family: monospace; font-size: small; margin: 0; margin-top: 0.5rem; padding: 1rem; background-color: white;">ewAiAG8AdQB0AHAAdQB0AHMAIgA6AFsAewAiAHYAYQBsAHUAZQAiADoANwAwADAAMAAwADAAMAAwADAALAAiAGEAZABkAHIAZQBzAHMAIgA6ACIAYgBpAHQAYwBvAGkAbgBjAGEAcwBoADoAcABwAHcAawA4AHUAOABjAGcAOABjAHQAaAByADMAagBnADAAYwB6AHoAYQB5AHMANgBoAHMAbgB5AHMAeQBrAGUAcwA5AGEAbQB3ADAANwBrAHYAIgB9ACwAewAiAHYAYQBsAHUAZQAiADoAMQAzADAAMAAwADAAMAAwADAAMAAsACIAYQBkAGQAcgBlAHMAcwAiADoAIgBiAGkAdABjAG8AaQBuAGMAYQBzAGgAOgBxAHIAcwByAHYAdABjADkANQBnAGcAOAByAHIAYQBnADcAZABnAGUAMwBqAGwAbgBmAHMANABqADkAcABlADAAdQBnAHIAbQBlAG0AbAA5ADUAMAAiAH0AXQAsACIAZABhAHQAYQAiADoAewAiAGEAbABpAGEAcwAiADoAIgAiACwAIgBjAG8AbQBtAGUAbgB0ACIAOgAiACIAfQAsACIAZABvAG4AYQB0AGkAbwBuACIAOgB7ACIAYQBtAG8AdQBuAHQAIgA6ADAAfQAsACIAZQB4AHAAaQByAGUAcwAiADoAMQA1ADgANQA0ADMAOQA5ADkAOQB9AA==</textarea>
+                  <button id="copyTemplateButton" class="btn waves-effect waves-light green" style="width: 100%;" data-label="copyButton">詳細をコピー</button>
+                </div>
+                <div class="col s12 m12 l6" style="margin-top: 0.75rem;">
+                  <small style="display: inline-block; width: 100%; text-align: center;" data-label="instructionsLabel">2. プレッジを準備する</small>
+                  <p id="instructions" style="display: flex; justify-content: center; align-items: center; text-align: center; font-size: small; height: 7rem; padding: 1rem; margin-bottom: 7px; margin-top: 0.5rem; border: 1px solid rgb(169, 169, 169);" data-label="instructions">Electron-Cashデスクトップのプラグインをインストールし、フリップスタータータブを使用してプレッジを準備します。</p>
+                  <div style="display: flex; align-items: center; justify-content: space-evenly;">
+                    <a id="downloadButton" class="btn" style="display: flex; align-items: center; justify-content: flex-start; background-color: transparent; color: black; box-shadow: none;" href="https://gitlab.com/flipstarter/flipstarter-electron-cash/uploads/60333177e440a76e5630caf975014b88/flipstarter-1.0.zip">
+                      <i class="icon-download"></i>
+                      <span style="margin-left: 0.25rem;" data-label="downloadText">ダウンロード</span>
+                    </a>
+                    <a id="linkInstructionsButton" class="btn" style="display: flex; align-items: center; justify-content: flex-start; background-color: transparent; color: black; box-shadow: none;" href="https://read.cash/@flipstarter/how-to-support-a-flipstarter-campaign-f27240d9">
+                      <i class="icon-info"></i>
+                      <span style="margin-left: 0.25rem;" data-label="instructionLink">説明</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="col s12 m12 l3" style="margin-top: 0.75rem;">
+                  <small style="display: inline-block; width: 100%; text-align: center;" data-label="commitLabel">3. プレッジを貼り付け</small>
+                  <textarea rows="5" id="commitment" name="commitment" placeholder="Paste here." style="height: 7rem; font-family: monospace; font-size: small; margin: 0; margin-top: 0.5rem; padding: 1rem; background-color: white;"></textarea>
+                  <button id="commitTransaction" class="btn" style="width: 100%;" data-label="commitButton">プレッジを提出</button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Campaign details. -->
+          <section id="campaignDetails" class="row"><h2 id="私たちについて">私たちについて</h2>
+            <p>私たちは<strong>EatBCH</strong>です。
+              サンドイッチの為の5ドルの募金活動は瞬く間に暗号通貨を利用したベネズエラ初のチャリティになり、その後
+              2つの国で20以上の地域を結ぶ国際的な組織へと成長しました。
+            ベネズエラと南スーダンはハイパーインフレーションの影響で困難に直面しています。グローバルな分散型通貨へのアクセスはこれらの地域に住む人達にとって残された、世界市場へと現実的に素早く簡単にアクセスする数少ない方法の一つです。ビットコインキャッシュは国境を超えた少額寄付を行う事ができる唯一の方法です。</p>
+            <p>私たちはお互いに助け合うことから大きな喜びを経験します。
+            ボランティアを行う人たちはボランティアを受ける人たちと同じ様に大きな喜びを得る事ができます。</p>
+            <h2 id="私たちの活動">私たちの活動</h2>
+            <p>世界中の優しい支援者たちがビットコインキャッシュによる寄付を行ってくれています。私たちはそのお金を使って現地で食べ物を購入し、現地のボランティアが困っている人たちに食事を配っています。食事を配った後はタイムスタンプ付きの写真で活動内容をご紹介し、ボランティア活動の透明化をはかっています。</p>
+            <h2 id="活動の成果">活動の成果</h2>
+            <ul>
+              <li>2年間で<strong>100,000</strong>食分の食事を提供。</li>
+              <li><strong>20</strong> ヶ所で少なくとも週一回は食事を提供。</li>
+              <li>寄付金の<strong>90%</strong>は<strong>直接</strong> 食べ物を買うことに使われた。</li>
+              <li><strong>40</strong> 人以上がボランティアに専念し、助けを必要とする人に提供。</li>
+            </ul>
+            <h2 id="現在の状況">現在の状況</h2>
+            <p><strong>ベネズエラ</strong>: この２年間で、全国の多くのコミュニティを支援し、BCHコミュニティ全体から驚くほど寛大な支援を受けています。
+            しかしながら、ベネズエラの状況は一向に改善の気配は無く、今も多くの人が私たちが毎週提供する安全な食事を必要としています。</p>
+            <p><strong>南スーダン</strong>: 2019年末までの寄付のおかげで、100ドル/月で5か所での運営から、200ドル/月で11か所の運営に拡大することができました。 毎月、運用を継続するには約13 BCH（2200ドル）の予算が必要です。 現在の場所は次のとおりです。</p>
+            <ul>
+              <li>Juba - Junub オープンスペーステックハブ</li>
+              <li>Juba - オリンピック選手Kenyi SantinoによるJebel コミュニティ</li>
+              <li>Juba - Mahad 国内避難民キャンプ</li>
+              <li>Juba - 出産サポート医療センター</li>
+              <li>Juba - Lawanci 孤児院</li>
+              <li>Juba - 学校</li>
+              <li>Yei - 教会内の避難民</li>
+              <li>Yei - シングルマザーの職業訓練センター</li>
+              <li>Yei – 地元の医療センターでの出産支援センター</li>
+              <li>Bor - Ataka テックハブ</li>
+              <li>Bor - 孤児と非行少年のケアハウス</li>
+            </ul>
+            <h2 id="寄付金の使い方">寄付金の使い方</h2>
+            <p><strong>ベネズエラ</strong>：7BCHは、
+            毎月4,000食と、助けが必要な人々に届けられるフードバッグを引き続き提供するのに役立ちます。</p>
+            <p><strong>南スーダン</strong>：13BCHは、毎月6,000食と、助けが必要な人々に届けられるフードバッグを引き続き提供するのに役立ちます。</p>
+            <h2 id="透明性に関する取り組み">透明性に関する取り組み</h2>
+            <p>プロジェクトを開始した時から可能な限り説明責任を果たし、効果的に集めた募金資金を使用していることを示してきました。 食事が配られた時間のブロック高とタイムスタンプとハッシュの写真を撮ります。 私たちは信頼で構築されたチームであり、ブロックチェーンを使った検証を通じて説明責任を果たすために努力しています。 これが私たちの「仕事の証明」です。</p>
+            <p>これに合わせて、ベネズエラと南スーダンの両方で最大の暗号通貨を活用した慈善団体として、ブロックチェーンの利点を活用して、これまでほとんど不可能だったレベルの透明性を実現しています。 寄付と支出はすべて、誰でも見ることができるように、公開台帳に不変かつ恒久的に記録されます。</p>
+          </section>
+        </article>
+
+        <!-- Campaign sidebar -->
+        <aside class="col s12 m12 l4">
+          <section>
+            <h3 style="float: left;">
+              <span class="valign-wrapper" style="float: left;">
+                <i class="icon-face"></i>
+                <b id="campaignRecipientCount">2</b>
+                <span data-label="recipientsLabel">受取人</span>
+              </span>
+            </h3>
+            <hr>
+            <ul id="recipientList" class="row" style="margin-bottom: 2rem;"><li class="col s6 m6 l12">
+              <a href="https://eatbch.org/venezuela/">
+                <img src="https://eatbch.org/_assets/img/venezuela-hero-wide.jpg?0.0.11" alt="EatBCH Venezuela">
+                <span>
+                  <b>EatBCH Venezuela</b>
+                  <i>7 BCH</i>
+                </span>
+              </a>
+            </li><li class="col s6 m6 l12">
+              <a href="https://eatbch.org/south-sudan/">
+                <img src="https://eatbch.org/_assets/img/south-sudan-hero-wide.jpg?0.0.11" alt="EatBCH South Sudan">
+                <span>
+                  <b>EatBCH South Sudan</b>
+                  <i>13 BCH</i>
+                </span>
+              </a>
+            </li></ul>
+          </section>
+
+          <section>
+            <h3 style="float: left;">
+              <span class="valign-wrapper" style="float: left;">
+                <i class="icon-favorite_border"></i>
+                <b id="campaignContributorCount">17</b>
+                <span data-label="contributorsLabel">協力者</span>
+              </span>
+            </h3>
+            <hr>
+            <ul id="contributionList"><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -13.65s; background-position: 0px 0.8rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">80%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias">Eric</b>
+                  <small class="contributionAmount">16.00 BCH</small>
+                </span>
+                <q class="contributionComment" style="display: none;"></q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -4.58s; background-position: 0px 3.4rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">6%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias">checksum0</b>
+                  <small class="contributionAmount">1.15 BCH</small>
+                </span>
+                <q class="contributionComment" style="display: none;"></q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -12.93s; background-position: 0px 3.42rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">5%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias">anonymous owl</b>
+                  <small class="contributionAmount">1.01 BCH</small>
+                </span>
+                <q class="contributionComment">hey this is where we feed more peeps right</q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -14.9s; background-position: 0px 3.42rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">5%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias">emergent_reasons#100🌵</b>
+                  <small class="contributionAmount">1.01 BCH</small>
+                </span>
+                <q class="contributionComment">Thank you eatbch volunteers for your hard work to help people.</q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -0.46s; background-position: 0px 3.56rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">1%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias" style="opacity: 0.37;">Anonymous</b>
+                  <small class="contributionAmount">0.20 BCH</small>
+                </span>
+                <q class="contributionComment" style="display: none;"></q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -13.27s; background-position: 0px 3.58rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">1%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias" style="opacity: 0.37;">Anonymous</b>
+                  <small class="contributionAmount">0.13 BCH</small>
+                </span>
+                <q class="contributionComment">mo money, mo food</q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -4.48s; background-position: 0px 3.58rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">1%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias">Kronk</b>
+                  <small class="contributionAmount">0.12 BCH</small>
+                </span>
+                <q class="contributionComment" style="display: none;"></q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -10.62s; background-position: 0px 3.58rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">1%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias">Keith Patrick</b>
+                  <small class="contributionAmount">0.11 BCH</small>
+                </span>
+                <q class="contributionComment">"Don't SHILL your fund.honkhonk.io in unnecessary places" - Mom</q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -6.61s; background-position: 0px 3.59rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">0%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias">Bitcoin Cash (BCH)</b>
+                  <small class="contributionAmount">0.06 BCH</small>
+                </span>
+                <q class="contributionComment">Bitcoin Cash: Delivering food, freedom, and upgraded money for the world!</q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -7.16s; background-position: 0px 3.59rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">0%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias">Licho</b>
+                  <small class="contributionAmount">0.05 BCH</small>
+                </span>
+                <q class="contributionComment" style="display: none;"></q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -12.01s; background-position: 0px 3.59rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">0%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias">Flipstarter.cash</b>
+                  <small class="contributionAmount">0.03 BCH</small>
+                </span>
+                <q class="contributionComment">Demo</q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -3.87s; background-position: 0px 3.59rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">0%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias">Flipstarter.cash</b>
+                  <small class="contributionAmount">0.03 BCH</small>
+                </span>
+                <q class="contributionComment">feedbch</q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -11.03s; background-position: 0px 3.59rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">0%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias">Satuper Nintendmoto</b>
+                  <small class="contributionAmount">0.03 BCH</small>
+                </span>
+                <q class="contributionComment">keep up the great work. this is amazing</q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -3.01s; background-position: 0px 3.59rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">0%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias" style="opacity: 0.37;">Anonymous</b>
+                  <small class="contributionAmount">0.03 BCH</small>
+                </span>
+                <q class="contributionComment" style="display: none;"></q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -5.04s; background-position: 0px 3.59rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">0%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias">Tester</b>
+                  <small class="contributionAmount">0.03 BCH</small>
+                </span>
+                <q class="contributionComment">BCH FTW!</q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -4.93s; background-position: 0px 3.6rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">0%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias" style="opacity: 0.37;">Anonymous</b>
+                  <small class="contributionAmount">0.00 BCH</small>
+                </span>
+                <q class="contributionComment" style="display: none;"></q>
+              </span>
+            </li><li>
+              <div>
+                <div class="contributionWaves" style="animation-delay: -8.82s; background-position: 0px 3.6rem;"></div>
+                <div class="contributionDisplay"></div>
+                <span class="contributionPercent">0%</span>
+              </div>
+              <span>
+                <span>
+                  <b class="contributionAlias" style="opacity: 0.37;">Anonymous</b>
+                  <small class="contributionAmount">0.00 BCH</small>
+                </span>
+                <q class="contributionComment" style="display: none;"></q>
+              </span>
+            </li></ul>
+          </section>
+        </aside>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- Site footer -->
+  <footer class="page-footer green">
+    <div class="container">
+      <div class="row">
+        <div class="col l5 s12">
+          <h5 class="white-text" data-label="footerLabel">私たちについて</h5>
+          <p class="grey-text text-lighten-4" data-label="footerText">私たちは、効果的で持続可能なボランティアによる資金調達方法を確立を目指すボランティアグループです。 Flipstarterは、ノンカストディアル、かつ最小限の信頼で資金を調達する方法です。</p>
+        </div>
+        <div class="col l2 m4 s4 offset-l1">
+          <h5 class="white-text" data-label="socialLabel">ソーシャル</h5>
+          <ul>
+            <li>
+              <a class="white-text valign-wrapper" href="https://twitter.com/flipstartercash">
+                <i class="icon-chat"></i>
+                &nbsp;
+                <span data-label="twitter">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a class="white-text valign-wrapper" href="https://read.cash/@flipstarter">
+                <i class="icon-info"></i>
+                &nbsp;
+                <span data-label="read.cash">Read.cash</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col l2 m4 s4">
+          <h5 class="white-text" data-label="contactLabel">コンタクト</h5>
+          <ul>
+            <li>
+              <a class="white-text valign-wrapper" href="mailto:info@flipstarter.cash">
+                <i class="icon-email"></i>
+                &nbsp;
+                <span data-label="email">Eメール</span>
+              </a>
+            </li>
+            <li>
+              <a class="white-text valign-wrapper" href="mailto:security@flipstarter.cash">
+                <i class="icon-security"></i>
+                &nbsp;
+                <span data-label="security">セキュリティ</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col l2 m4 s4">
+          <h5 class="white-text" data-label="codeLabel">コード</h5>
+          <ul>
+            <li>
+              <a class="white-text valign-wrapper" href="https://gitlab.com/emergent-reasons/funding-traction/issues">
+                <i class="icon-report_problem"></i>
+                &nbsp;
+                <span data-label="issues">問題</span>
+              </a>
+            </li>
+            <li>
+              <a class="white-text valign-wrapper" href="https://gitlab.com/emergent-reasons/funding-traction">
+                <i class="icon-code"></i>
+                &nbsp;
+                <span data-label="source">ソースコード</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container center" style="opacity: 0.65;">
+        <span data-label="copyright">Copyright 2020, Flipstarter Contributors, </span>
+        <a href="https://gitlab.com/emergent-reasons/funding-traction/blob/master/LICENSE" style="color: inherit; border-bottom: 1px dashed rgba(256, 256, 256, 0.33)" data-label="license">MIT license</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="languageSelector" class="fixed-action-btn">
+    <b id="currentLanguage" data-string="changeLanguage">
+      <a href="/">🇬🇧</a>
+      <a href="/zh">🇨🇳</a>
+      <a href="/ja">🇯🇵</a>
+    </b>
+  </div>
+
+  <!-- -->
+  <template id="recipientTemplate">
+    <li class="col s6 m6 l12">
+      <a>
+        <img>
+        <span>
+          <b></b>
+          <i></i>
+        </span>
+      </a>
+    </li>
+  </template>
+  <template id="contributionTemplate">
+    <li>
+      <div>
+        <div class="contributionWaves"></div>
+        <div class="contributionDisplay"></div>
+        <span class="contributionPercent"></span>
+      </div>
+      <span>
+        <span>
+          <b class="contributionAlias"></b>
+          <small class="contributionAmount"></small>
+        </span>
+        <q class="contributionComment"></q>
+      </span>
+    </li>
+  </template>
+  <template id="emptyContributionMessage">
+    <li style="display: block; text-align: center; color: rgba(0, 0, 0, 0.5); padding: 2rem;">
+      <i data-label="contributorEmpty1">まだ誰もプレッジしていません。.</i>
+      <br>
+      <i data-label="contributorEmpty2">あなたが最初かもしれません。</i>
+    </li>
+  </template>
+
+  <!-- Load the javascript as the last step to ensure fastest load time. -->
+  <!-- <script src="js/application.js"></script> -->
+
+  <!-- -->
+  <audio src="snd/applause.mp3" id="applause"></audio>
+
+
+</body>
+</html>
